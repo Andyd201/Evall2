@@ -46,7 +46,9 @@ const authentifier = (req, res, next) => {
 
 module.exports = authentifier;
 
-
+app.get("/api", async (req,res) => {
+    res.json({ message: "Bienvenue sur l'API du catalogue de films !" });
+})
 
 // Routes Publiques
 
@@ -192,10 +194,6 @@ app.post("/api/login", async (req, res) => {
         res.status(500).json({ message: "Erreur serveur lors de la connexion." });
     }
 });
-
-
-
-
 
 
 
